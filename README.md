@@ -5,6 +5,8 @@ Swift is a great language. But in acessing String to get slices, I prefer Python
 
 To facilitate myself in my projects, I designed those extensions.
 
+🔴 Sorry, negative indices like Python are not supported. This is just to conform to Swift conventions, although it is easy to realise.
+
 Example:
 
 import UIKit
