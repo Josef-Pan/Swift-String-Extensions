@@ -8,6 +8,7 @@ To facilitate myself in my projects, I designed those extensions.
 Example:
 
 import UIKit
+
 var greeting = "Hello playground!"
 
 print( greeting[-100..<100] )                       // Will print the whole string
