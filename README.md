@@ -12,6 +12,7 @@ Example:
 import UIKit
 
 var greeting = "Hello playground!"
+
 print("Using extension \(greeting[1])")   // Should return "e"
 
 greeting[1]="a"                           // Change the "e" to German style "a", which is "Hallo"
