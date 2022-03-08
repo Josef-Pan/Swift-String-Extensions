@@ -1,7 +1,7 @@
 import Foundation
 // Extensions to acess String directly by integer index, or integer Range
 // eg. string[2], string[2..<5], string[2...5], string[...5], string[..<5], string[2...]
-// Safe even integers exceeding boundaries
+// ✅ Safe even integers exceeding boundaries, except the string[ix] returning a char 🔴
 extension String{
     subscript (ix: Int) -> Character { // 🔴 Using of this function needs to make sure the ix is legal
         get {
