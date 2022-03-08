@@ -17,7 +17,7 @@ print("Using extension \\(greeting[1])")   // Should return "e"
 
 greeting[1]="a"                           // Change the "e" to German style "a", which is "Hallo"
 
-print("Using extension subscript changing e to a \(greeting)")
+print("Using extension subscript changing e to a \\(greeting)")
 
 print( greeting[-100..<100] )                    // Will print the whole string, -100 < 0, that's fine, 100 >= greeting.count, also fine 
 
