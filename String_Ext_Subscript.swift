@@ -3,7 +3,7 @@ import Foundation
 // eg. string[2], string[2..<5], string[2...5], string[...5], string[..<5], string[2...]
 // Safe even integers exceeding boundaries
 extension String{
-    subscript (ix: Int) -> Character { // 🔴Using of this function needs to make sure the ix is legal
+    subscript (ix: Int) -> Character { // 🔴 Using of this function needs to make sure the ix is legal
         get {
             let index = self.index(self.startIndex, offsetBy: ix)
             return self[index]
