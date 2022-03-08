@@ -11,7 +11,7 @@ import UIKit
 
 var greeting = "Hello playground!"
 
-print( greeting[-100..<100] )                    // Will print the whole string
+print( greeting[-100..<100] )                    // Will print the whole string, -100 < 0, that's fine, 100 >= greeting.count, also fine 
 
 print( greeting[0...5], "💚" ,greeting[0...100]) // Will print first 6 chars, and then the whole string
 
