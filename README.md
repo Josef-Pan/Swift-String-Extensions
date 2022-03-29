@@ -1,4 +1,4 @@
-# string_subscript_integer
+#Swift String Extensions
 Access String by integer subscripts instead of the complex String.Index
 
 Swift is a great language. But in acessing String to get slices, I prefer Python's way. I understand Swift's idea is to return a String Slice instead of a String object to avoid copying. But in most cases, the Strings we need to process are very short and cost of copying is very low.
