@@ -9,7 +9,7 @@ extension String {
     /// chars include all letters, all digits, and SPACE
     static func radomString(min_length:Int, max_length: Int) ->String{
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 "
-        let max = Swift.min(max_length, letters.count)
+        let max = Swift.min(max_length, letters.count) // Swift must be added in front of min
         let length = Int.random(in: min_length...max) //minimum 1, maximum max_length or letters.count
         return String((0..<length).map{ _ in letters.randomElement()! })
     }
