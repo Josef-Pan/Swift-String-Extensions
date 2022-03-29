@@ -5,6 +5,14 @@ import UIKit
 /// This file will be constantly updated with new features
 
 extension String {
+    /// Generate a random string from letters, containing from 1 to max_length chars
+    /// chars include all letters, all digits, and SPACE
+    static func radomString(min_length:Int, max_length: Int) ->String{
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 "
+        let max = Swift.min(max_length, letters.count)
+        let length = Int.random(in: min_length...max) //minimum 1, maximum max_length or letters.count
+        return String((0..<length).map{ _ in letters.randomElement()! })
+    }
     
     func widthWithFont(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
