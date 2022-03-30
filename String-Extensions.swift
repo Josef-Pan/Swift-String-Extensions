@@ -109,9 +109,9 @@ extension String {
     subscript (r: Range<Int>) -> String{ // ✅ Safe to use Range from any indices, even exceeding boundary
         get {
             // Keep starting idx between 0 and boundary
-            let lowerBound  = min(max(r.lowerBound, 0), self.count-1)
+            let lowerBound  = min(max(r.lowerBound, 0), self.count)
             // Keep ending idx between 0 and boundary
-            let upperBound  = max(min(r.upperBound, self.count-1), 0)
+            let upperBound  = max(min(r.upperBound, self.count), 0)
             let startIndex = self.index(self.startIndex, offsetBy: lowerBound)
             let endIndex = self.index(self.startIndex, offsetBy: upperBound)
             return String(self[startIndex..<endIndex])
@@ -126,9 +126,9 @@ extension String {
         // ✅  Safe to use Range from any indices, even exceeding boundary
         get {
             // Keep starting idx between 0 and boundary
-            let lowerBound  = min(max(r.lowerBound, 0), self.count-1)
+            let lowerBound  = min(max(r.lowerBound, 0), self.endIndex)
             // Keep ending idx between 0 and boundary
-            let upperBound  = max(min(r.upperBound, self.count-1), 0)
+            let upperBound  = max(min(r.upperBound, self.endIndex), 0)
             let startIndex = self.index(self.startIndex, offsetBy: lowerBound)
             let endIndex = self.index(self.startIndex, offsetBy: upperBound)
             return String(self[startIndex...endIndex])
