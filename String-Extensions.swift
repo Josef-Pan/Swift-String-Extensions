@@ -14,13 +14,13 @@ extension String {
         return String((0..<length).map{ _ in letters.randomElement()! })
     }
     
-    func widthWithFont(usingFont font: UIFont) -> CGFloat {
+    func widthUsingFont(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = (self as NSString).size(withAttributes: fontAttributes)
         return size.width
     }
     
-    func heightWithFont(usingFont font: UIFont) -> CGFloat {
+    func heightUsingFont(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = (self as NSString).size(withAttributes: fontAttributes)
         return size.height
